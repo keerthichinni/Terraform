@@ -1,0 +1,73 @@
+What it is:
+The actual Terraform program (terraform.exe on Windows) that performs the real work — creating, modifying, and destroying infrastructure.
+
+🔹 What it does:
+You use it in your terminal to run commands such as:
+
+terraform init
+terraform plan
+terraform apply
+terraform destroy
+
+
+🔹 Purpose:
+
+Reads .tf files.
+
+Connects to cloud providers (Azure, AWS, etc.) through APIs.
+
+Creates the resources defined in your code.
+
+Maintains the Terraform state (terraform.tfstate).
+
+🔹 Where it runs:
+On your local machine (via PowerShell, CMD, or VS Code terminal) or in CI/CD pipelines (Azure DevOps, GitLab, etc.).
+
+🔹 Example:
+If you run:
+
+terraform apply
+
+
+➡️ The CLI calls Azure APIs and provisions resources like VNets, Storage Accounts, etc.
+
+💻 2️⃣ Terraform VS Code Extension (HashiCorp Terraform)
+
+🔹 What it is:
+A VS Code plugin that helps you write Terraform code better — it’s a developer tool, not the engine.
+
+🔹 What it does:
+
+Provides syntax highlighting for .tf files.
+
+Gives IntelliSense (auto-completion for resources, arguments, variables).
+
+Shows linting/errors in real time.
+
+Supports formatting (Shift + Alt + F).
+
+Helps with code navigation (Go to Definition, Hover docs).
+
+🔹 Purpose:
+Improves your productivity and makes writing Terraform easier, but it cannot run Terraform commands by itself.
+
+🔹 Where it runs:
+Inside VS Code, as part of the editor.
+
+🧩 In short
+Feature	Terraform CLI	Terraform Extension
+Type	Executable (binary program)	VS Code plugin
+Purpose	Runs Terraform commands (init, plan, apply)	Helps write Terraform code
+Executes Terraform code	✅ Yes	❌ No
+Provides syntax highlighting	❌ No	✅ Yes
+Needed for actual deployment	✅ Essential	Optional but helpful
+Installed from	Terraform website	VS Code Marketplace
+Runs in	Terminal / Shell	VS Code editor
+💬 Analogy:
+
+Think of it like this:
+
+Terraform CLI = Engine of a car
+VS Code Extension = Dashboard, steering wheel, and GPS that make driving easier
+
+You need the CLI to actually move (apply infrastructure), while the extension just helps you write and visualize the code.
